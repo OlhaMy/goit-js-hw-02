@@ -1,9 +1,9 @@
- const country = prompt('tape your country');
 
  function getShippingCost(country) {
     let prise = 0;
+    const normalizedCountry = country.toLowerCase();
 
-    switch(country.toLowerCase()) {
+    switch(normalizedCountry) {
         case 'china':
             prise = 100;
             break;
@@ -25,8 +25,6 @@
     }
     return `Shipping to ${country} will cost ${prise} credits`;
  }
-
-alert(getShippingCost(country));
 
 console.log(getShippingCost("Australia")); 
 console.log(getShippingCost("Germany"));

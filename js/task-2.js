@@ -1,9 +1,9 @@
 function formatMessage(message, maxLength) {
-    if(message < maxLength) {
-        return(`${message}`);
-    } else {
-       const editedMessage = message.slice(0, maxLength) + `...`;
-       return(`${editedMessage}`);
+ 
+     if(message.length <= maxLength) {
+        return message;
+     } else {
+        return message.slice(0, maxLength) + '...';
     }
 }
 console.log(formatMessage("Curabitur ligula sapien", 16));
@@ -12,3 +12,6 @@ console.log(formatMessage("Vestibulum facilisis purus nec", 20));
 console.log(formatMessage("Vestibulum facilisis purus nec", 30));
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); 
+
+
+
